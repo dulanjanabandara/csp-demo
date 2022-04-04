@@ -5,8 +5,8 @@ const app = express();
 
 app.use(function (req, res, next) {
   res.setHeader(
-    "Content-Security-Policy",
-    "default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; styles-src 'self'; frame-src 'self';"
+    "Content-Security-Policy-Report-Only",
+    "default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; frame-src 'self'"
   );
   next();
 });
